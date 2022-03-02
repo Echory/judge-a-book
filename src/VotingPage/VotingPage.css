@@ -1,0 +1,16 @@
+.app-name {
+  font-family: 'Sawarabi Mincho', serif;
+  margin-left: 10px;
+  font-size: 35px;
+}
+
+.cover-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+.vote-buttons {
+margin-top: 20px;
+}
