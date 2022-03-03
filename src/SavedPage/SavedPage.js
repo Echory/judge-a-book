@@ -1,4 +1,5 @@
 import React from "react"
+import "./SavedPage.css"
 
 let savedBooks = [{  
   "kind": "books#volume",
@@ -423,11 +424,9 @@ const SavedPage = () => {
   return(
     <section className="fetched-books">
       {savedBooks.map(({ id, volumeInfo}) => (
-        <div key={id}>
-          <p>{volumeInfo.title}</p>
-          <img src={volumeInfo.imageLinks.thumbnail}/>
-          
-          
+        <div className="book-div" key={id}>
+          <p className="cover-title">{volumeInfo.title}</p>
+          <img className="saved-img" src={volumeInfo.imageLinks.thumbnail}/>
         </div>
       ))}
     </section>

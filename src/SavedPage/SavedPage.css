@@ -1,0 +1,20 @@
+.cover-title {
+  font-family: 'Sawarabi Mincho', serif;
+  background: none;
+}
+
+.saved-img {
+  height: 250px;
+}
+
+.fetched-books {
+  display: grid;
+  grid-gap: 1%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  justify-content: space-evenly;
+  padding-left: 3%;
+}
+
+.book-div {
+  background: none;
+}
