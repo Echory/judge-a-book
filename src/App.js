@@ -2,6 +2,7 @@ import {Component} from "react"
 import { Route, Switch } from "react-router-dom";
 import './App.css'
 import VotingPage from "./VotingPage/VotingPage"
+import SavedPage from "./SavedPage/SavedPage";
 
 class App extends Component {
   constructor() {
@@ -16,6 +17,9 @@ class App extends Component {
       <Switch>
         <Route exact path="/">
           <VotingPage />
+        </Route>
+        <Route exact path="/saved">
+          <SavedPage />
         </Route>
       </Switch>
     )
