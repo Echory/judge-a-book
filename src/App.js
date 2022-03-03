@@ -30,12 +30,16 @@ class App extends Component {
     this.setState({randomBook})
   }
 
+  saveBook = () => {
+
+  } 
+
 
   render() {
     return(
       <Switch>
         <Route exact path="/">
-          <VotingPage nextBook={this.setRandomBook} book={this.state.randomBook}/>
+          <VotingPage saveBook={this.saveBook} nextBook={this.setRandomBook} book={this.state.randomBook}/>
         </Route>
         <Route exact path="/saved">
           <SavedPage />
