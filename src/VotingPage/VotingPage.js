@@ -1,7 +1,7 @@
 import React from "react"
 import "./VotingPage.css"
 
-const VotingPage = () => {
+const VotingPage = ({books}) => {
   return(
     <div>
       <h1 className="app-name">Judge A Book</h1>
