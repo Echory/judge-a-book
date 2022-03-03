@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      books: []
+      books: [],
+      randomBook: undefined
     }
   }
 
@@ -20,13 +21,21 @@ class App extends Component {
   async getBooks() {
     const books = await fetchBooks()
     this.setState({books})
+
+    this.setRandomBook()
   }
+
+  setRandomBook = () => {
+    const randomBook = this.state.books[Math.floor(Math.random()*this.state.books.length)];
+    this.setState({randomBook})
+  }
+
 
   render() {
     return(
       <Switch>
         <Route exact path="/">
-          <VotingPage books={this.state.books} />
+          <VotingPage nextBook={this.setRandomBook} book={this.state.randomBook}/>
         </Route>
         <Route exact path="/saved">
           <SavedPage />
