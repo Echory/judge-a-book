@@ -10,7 +10,8 @@ class App extends Component {
     super()
     this.state = {
       books: [],
-      randomBook: undefined
+      randomBook: undefined,
+      savedBooks: []
     }
   }
 
@@ -31,7 +32,8 @@ class App extends Component {
   }
 
   saveBook = () => {
-    //post this.state.randomBook to server
+    this.setState({savedBooks: [...this.state.savedBooks, this.state.randomBook]})
+    debugger
   } 
 
 
@@ -42,7 +44,7 @@ class App extends Component {
           <VotingPage saveBook={this.saveBook} nextBook={this.setRandomBook} book={this.state.randomBook}/>
         </Route>
         <Route exact path="/saved">
-          <SavedPage />
+          <SavedPage savedBooks={this.state.savedBooks} />
         </Route>
       </Switch>
     )

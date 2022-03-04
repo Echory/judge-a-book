@@ -25,3 +25,14 @@
 .cover-img {
   height: 320px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saved-button {
+  cursor: pointer;
+  height: 30px;
+  margin-top: 20px;
+}
