@@ -7,33 +7,28 @@ describe("Load voting and render the expected page elements", () => {
       .get("div.header")
       .should("be.visible");
   });
-  it("Should be able to visit the page and render the 'Get More Inspiration' button", () => {
-    cy.visit("http://localhost:3000/favorites")
-      .get("div.saved-button")
+  it("Should be able to visit the page and render the 'See Saved' button", () => {
+    cy.visit("http://localhost:3000")
+      .get(".saved-button")
   });
-  // it("Should be able to visit the page and render the 'Your Favorite Inspirations' header", () => {
-  //   cy.visit("http://localhost:3000/favorites").contains(
-  //     "h1",
-  //     "Your Favorite Inspirations"
-  //   );
-  // });
-  // it("Should be able to visit the page and render the favorites container", () => {
-  //   cy.visit("http://localhost:3000/favorites").get("div.favorite");
-  // });
-  // it("Should be able to delete inspirations", () => {
-  //   cy.visit("http://localhost:3000/inspiration")
-  //   cy.wait(500)
-  //   .get(".save-button")
-  //   .click()
-  //   .get(".see-inspo-button")
-  //   .click()
-  //   .get("button.delete-button")
-  //   .click()
-  // })
-  // it("Should be able to click the 'Get More Inspiration' button and go to Inspiration page", () => {
-  //   cy.get("button")
-  //     .click()
-  //     .url()
-  //     .should("eq", "http://localhost:3000/inspiration");
-  // });
+  it("Should be able to visit the page and render the book cover container", () => {
+    cy.visit("http://localhost:3000")
+        .get(".cover-img");
+  });
+  it("Should be able to thumbs up a book cover", () => {
+    cy.visit("http://localhost:3000")
+    .get(".thumbs-up")
+    .click()
+  })
+  it("Should be able to thumbs down a book cover", () => {
+    cy.visit("http://localhost:3000")
+    .get(".thumbs-down")
+    .click()
+  })
+  it("Should be able to click the 'See Saved' button and go to saved page", () => {
+    cy.get(".saved-button")
+      .click()
+      .url()
+      .should("eq", "http://localhost:3000/saved");
+  });
 });
