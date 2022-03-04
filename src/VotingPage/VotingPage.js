@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const VotingPage = ({book, nextBook, saveBook}) => {
   if(book) {
     return(
-      <div>
+      <div className="vote-container">
         <div className="header">
           <h1 className="app-name">Judge A Book</h1>
           <Link to="/saved">
@@ -16,8 +16,8 @@ const VotingPage = ({book, nextBook, saveBook}) => {
         <section className="cover-section">
           <img className="cover-img" src={book.volumeInfo.imageLinks.thumbnail}/>
           <div className="vote-buttons">
-            <button onClick={saveBook}>👍</button>
-            <button onClick={nextBook}>👎</button>
+            <button className="vote-button" onClick={saveBook}>👍</button>
+            <button className="vote-button" onClick={nextBook}>👎</button>
           </div>
         </section>
       </div>

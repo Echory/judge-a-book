@@ -1,7 +1,13 @@
+.vote-container {
+  background-image: url("../paper.jpg");
+}
+
 .app-name {
   font-family: 'Sawarabi Mincho', serif;
   margin-left: 10px;
   font-size: 35px;
+  color: white;
+  text-shadow: 2px 2px rgb(29, 27, 27);
 }
 
 .cover-section {
@@ -15,11 +21,21 @@
   margin-top: 20px;
 }
 
+.vote-button {
+  border: none;
+  font-size: 30px;
+  padding: 20px;
+  cursor: pointer;
+  background: none;
+}
+
 .judge-para {
   font-family: 'Sawarabi Mincho', serif;
   font-size: 30px;
   text-align: center;
   margin-top:30px;
+  color: white;
+  text-shadow: 2px 2px rgb(29, 27, 27);
 } 
 
 .cover-img {
@@ -34,5 +50,11 @@
 .saved-button {
   cursor: pointer;
   height: 30px;
-  margin-top: 20px;
+  margin: 30px 20px 0 0;
+  border: none;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 20px;
+  background: none;
+  color: white;
+  text-shadow: 2px 2px rgb(29, 27, 27);
 }

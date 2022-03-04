@@ -33,7 +33,6 @@ class App extends Component {
 
   saveBook = () => {
     this.setState({savedBooks: [...this.state.savedBooks, this.state.randomBook]})
-    debugger
   } 
 
 
