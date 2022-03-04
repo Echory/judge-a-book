@@ -8,9 +8,31 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 250px;
+  margin-top: 100px;
 }
 
 .vote-buttons {
-margin-top: 20px;
+  margin-top: 20px;
+}
+
+.judge-para {
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top:30px;
+} 
+
+.cover-img {
+  height: 320px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saved-button {
+  cursor: pointer;
+  height: 30px;
+  margin-top: 20px;
 }
