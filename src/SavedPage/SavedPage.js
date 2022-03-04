@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const SavedPage = ({savedBooks}) => {
   return(
-    <div>
+    <div className="saved-container">
       <Link to="/">
         <button className="back-button">Back To Vote</button>
       </Link>

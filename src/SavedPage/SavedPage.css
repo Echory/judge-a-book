@@ -1,14 +1,22 @@
+.saved-container {
+  background-image: url("../paper.jpg");
+  height: 100vh;
+}
+
 .to-read {
   font-family: 'Sawarabi Mincho', serif;
-  color: white;
+  color: black;
   text-align: center;
   text-decoration: underline;
+  text-shadow: 1px 1px rgb(233, 214, 214);
 }
 
 .cover-title {
   font-family: 'Sawarabi Mincho', serif;
   background: none;
   color: white;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .saved-img {
@@ -28,9 +36,10 @@
   cursor: pointer;
   height: 30px;
   margin-left: 90%;
-  color: white;
+  color: black;
   border: none;
   font-family: 'Sawarabi Mincho', serif;
   font-size: 20px;
-
+  text-shadow: 1px 1px rgb(233, 214, 214);
+  background: none;
 }
