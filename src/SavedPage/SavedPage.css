@@ -1,6 +1,14 @@
+.to-read {
+  font-family: 'Sawarabi Mincho', serif;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+}
+
 .cover-title {
   font-family: 'Sawarabi Mincho', serif;
   background: none;
+  color: white;
 }
 
 .saved-img {
@@ -15,6 +23,14 @@
   padding-left: 3%;
 }
 
-.book-div {
-  background: none;
+
+.back-button {
+  cursor: pointer;
+  height: 30px;
+  margin-left: 90%;
+  color: white;
+  border: none;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 20px;
+
 }
