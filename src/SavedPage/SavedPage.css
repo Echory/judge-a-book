@@ -5,10 +5,10 @@
 
 .to-read {
   font-family: 'Sawarabi Mincho', serif;
-  color: black;
   text-align: center;
   text-decoration: underline;
-  text-shadow: 1px 1px rgb(233, 214, 214);
+  color: white;
+  text-shadow: 2px 2px rgb(29, 27, 27);
 }
 
 .cover-title {
@@ -36,10 +36,10 @@
   cursor: pointer;
   height: 30px;
   margin-left: 90%;
-  color: black;
   border: none;
   font-family: 'Sawarabi Mincho', serif;
   font-size: 20px;
-  text-shadow: 1px 1px rgb(233, 214, 214);
+  color: white;
+  text-shadow: 2px 2px rgb(29, 27, 27);
   background: none;
 }
