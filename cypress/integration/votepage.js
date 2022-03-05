@@ -15,12 +15,12 @@ describe("Load voting and render the expected page elements", () => {
     cy.visit("http://localhost:3000")
         .get(".cover-img");
   });
-  it("Should be able to thumbs up a book cover", () => {
+  it("Should be able to save a book cover", () => {
     cy.visit("http://localhost:3000")
     .get(".thumbs-up")
     .click()
   })
-  it("Should be able to thumbs down a book cover", () => {
+  it("Should be able to next a book cover", () => {
     cy.visit("http://localhost:3000")
     .get(".thumbs-down")
     .click()
