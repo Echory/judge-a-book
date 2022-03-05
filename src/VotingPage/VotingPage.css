@@ -1,13 +1,14 @@
 .vote-container {
-  background-image: url("../paper.jpg");
+  background-image: url("../book.jpg");
+  background-size: cover;
 }
 
 .app-name {
   font-family: 'Sawarabi Mincho', serif;
   margin-left: 10px;
   font-size: 35px;
-  color: white;
-  text-shadow: 2px 2px rgb(29, 27, 27);
+  color: black;
+  text-shadow: 3px 3px white;
 }
 
 .cover-section {
@@ -24,18 +25,18 @@
 .vote-button {
   border: none;
   font-size: 30px;
-  padding: 20px;
+  padding: 30px;
   cursor: pointer;
   background: none;
+  text-decoration: underline;
 }
 
 .judge-para {
   font-family: 'Sawarabi Mincho', serif;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   margin-top:30px;
-  color: white;
-  text-shadow: 2px 2px rgb(29, 27, 27);
+  color: black;
 } 
 
 .cover-img {
@@ -53,8 +54,8 @@
   margin: 30px 20px 0 0;
   border: none;
   font-family: 'Sawarabi Mincho', serif;
-  font-size: 20px;
+  font-size: 25px;
   background: none;
-  color: white;
-  text-shadow: 2px 2px rgb(29, 27, 27);
+  color: black;
+  text-shadow: 2px 2px white;
 }
