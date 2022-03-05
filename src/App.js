@@ -21,7 +21,6 @@ class App extends Component {
   async getBooks() {
     const books = await fetchBooks()
     this.setState({books})
-
     this.setRandomBook()
   }
 
@@ -35,6 +34,7 @@ class App extends Component {
     
     if (savedBooks === null) {
       localStorage.setItem("savedBooks", JSON.stringify([this.state.randomBook]))
+      return
     }
     savedBooks.push(this.state.randomBook)
     localStorage.setItem("savedBooks", JSON.stringify(savedBooks))
