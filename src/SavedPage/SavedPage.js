@@ -1,8 +1,26 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import "./SavedPage.css"
 import { Link } from "react-router-dom"
 
-const SavedPage = ({savedBooks, deleteBook}) => {
+const SavedPage = () => {
+  const [savedBooks, setSavedBooks] = useState([]);
+
+  const deleteBook = (id) => {
+    let booksFromLocalStorage = JSON.parse(localStorage.getItem("savedBooks"))
+    
+    booksFromLocalStorage = booksFromLocalStorage.filter(book => book.id !== id)
+    localStorage.setItem("savedBooks", JSON.stringify(booksFromLocalStorage))
+
+    setSavedBooks(booksFromLocalStorage)
+  };
+
+  useEffect(() => {
+    const books = JSON.parse(localStorage.getItem("savedBooks"))
+    if (books) {
+      setSavedBooks(books)
+    }
+  }, [])
+
   return(
     <div className="saved-container">
       <nav className="nav-bar">

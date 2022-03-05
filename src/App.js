@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       books: [],
       randomBook: undefined,
-      savedBooks: []
     }
   }
 
@@ -32,15 +31,15 @@ class App extends Component {
   }
 
   saveBook = () => {
-    this.setState({savedBooks: [...this.state.savedBooks, this.state.randomBook]})
+    let savedBooks = JSON.parse(localStorage.getItem("savedBooks"))
+    
+    if (savedBooks === null) {
+      localStorage.setItem("savedBooks", JSON.stringify([this.state.randomBook]))
+    }
+    savedBooks.push(this.state.randomBook)
+    localStorage.setItem("savedBooks", JSON.stringify(savedBooks))
   } 
 
-  deleteBook = (id) => {
-    const newSaved = this.state.savedBooks.filter(
-      (saved) => saved.id !== id
-    );
-    this.setState({ savedBooks: newSaved });
-  };
 
 
   render() {
@@ -50,7 +49,7 @@ class App extends Component {
           <VotingPage saveBook={this.saveBook} nextBook={this.setRandomBook} book={this.state.randomBook}/>
         </Route>
         <Route exact path="/saved">
-          <SavedPage savedBooks={this.state.savedBooks} deleteBook={this.deleteBook} />
+          <SavedPage />
         </Route>
       </Switch>
     )
