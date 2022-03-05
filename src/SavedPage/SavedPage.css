@@ -1,6 +1,5 @@
 .saved-container {
-  background-image: url("../paper.jpg");
-  height: 100vh;
+  
 }
 
 .to-read {
@@ -9,6 +8,8 @@
   text-decoration: underline;
   color: white;
   text-shadow: 2px 2px rgb(29, 27, 27);
+  background-color:rgb(87, 136, 122);
+  font-size: 30px;
 }
 
 .cover-title {
@@ -42,4 +43,16 @@
   color: white;
   text-shadow: 2px 2px rgb(29, 27, 27);
   background: none;
+  background-color:rgb(87, 136, 122);
+}
+
+.nav-bar {
+  background-color: rgb(87, 136, 122);
+}
+
+.delete-button {
+  background: none;
+  border:none;
+  font-size: 20px;
+  cursor: pointer;
 }
