@@ -2,7 +2,7 @@ import React from "react"
 import "./SavedPage.css"
 import { Link } from "react-router-dom"
 
-const SavedPage = ({savedBooks}) => {
+const SavedPage = ({savedBooks, deleteBook}) => {
   return(
     <div className="saved-container">
       <Link to="/">
@@ -14,6 +14,7 @@ const SavedPage = ({savedBooks}) => {
           <div className="book-div" key={id}>
             <p className="cover-title">{volumeInfo.title}</p>
             <img className="saved-img" src={volumeInfo.imageLinks.thumbnail}/>
+            <button onClick={() => deleteBook(id)}>Delete</button>
           </div>
         ))}
       </section>

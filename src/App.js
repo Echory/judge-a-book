@@ -35,6 +35,13 @@ class App extends Component {
     this.setState({savedBooks: [...this.state.savedBooks, this.state.randomBook]})
   } 
 
+  deleteBook = (id) => {
+    const newSaved = this.state.savedBooks.filter(
+      (saved) => saved.id !== id
+    );
+    this.setState({ savedBooks: newSaved });
+  };
+
 
   render() {
     return(
@@ -43,7 +50,7 @@ class App extends Component {
           <VotingPage saveBook={this.saveBook} nextBook={this.setRandomBook} book={this.state.randomBook}/>
         </Route>
         <Route exact path="/saved">
-          <SavedPage savedBooks={this.state.savedBooks} />
+          <SavedPage savedBooks={this.state.savedBooks} deleteBook={this.deleteBook} />
         </Route>
       </Switch>
     )
