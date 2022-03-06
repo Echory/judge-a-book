@@ -25,10 +25,11 @@ const SavedPage = () => {
   return(
     <div className="saved-container">
       <nav className="nav-bar">
+      <h1 className="app-name-saved">Judge A Book</h1>
+      <h2 className="to-read">To-read</h2>
         <Link to="/">
           <button className="back-button">Back To Vote</button>
         </Link>
-        <h1 className="to-read">To-read</h1>
       </nav>
       <section className="fetched-books">
         {savedBooks.map(({ id, volumeInfo }) => (
