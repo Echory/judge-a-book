@@ -1,6 +1,7 @@
 import React from "react"
 import "./VotingPage.css"
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types';
 
 const VotingPage = ({book, nextBook, saveBook}) => {
   if(book) {
@@ -28,3 +29,9 @@ const VotingPage = ({book, nextBook, saveBook}) => {
 }
 
 export default VotingPage
+
+VotingPage.propTypes = {
+  book: PropTypes.object,
+  nextBook: PropTypes.func.isRequired,
+  saveBook: PropTypes.func.isRequired
+}
