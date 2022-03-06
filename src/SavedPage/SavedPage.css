@@ -53,3 +53,18 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 520px) {
+  .back-button {
+    font-size: 18px;
+    margin-left: 70%;
+    margin-top:20px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 520px) {
+  .to-read {
+    font-size: 25px;
+  }
+}

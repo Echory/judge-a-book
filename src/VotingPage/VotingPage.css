@@ -1,8 +1,3 @@
-.vote-container {
-  background-image: url("../book.jpg");
-  background-size: cover;
-}
-
 .app-name {
   font-family: 'Sawarabi Mincho', serif;
   margin-left: 10px;
@@ -46,6 +41,8 @@
 .header {
   display: flex;
   justify-content: space-between;
+  background-color: 2px rgb(29, 27, 27);
+  background-color:rgb(87, 136, 122);;
 }
 
 .saved-button {
@@ -58,4 +55,19 @@
   background: none;
   color: black;
   text-shadow: 2px 2px white;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .judge-para,
+  .vote-button {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .saved-button {
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 10px;
+  }
 }
