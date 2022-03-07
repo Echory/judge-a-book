@@ -1,8 +1,9 @@
 import {Component} from "react"
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom"
 import './App.css'
 import VotingPage from "./VotingPage/VotingPage"
-import SavedPage from "./SavedPage/SavedPage";
+import SavedPage from "./SavedPage/SavedPage"
+import ErrorPage from "./ErrorPage/ErrorPage"
 import {fetchBooks} from './apiCalls'
 
 class App extends Component {
@@ -51,6 +52,7 @@ class App extends Component {
         <Route exact path="/saved">
           <SavedPage />
         </Route>
+        <Route component={ErrorPage}></Route>
       </Switch>
     )
   }
