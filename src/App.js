@@ -38,6 +38,7 @@ class App extends Component {
     }
     savedBooks.push(this.state.randomBook)
     localStorage.setItem("savedBooks", JSON.stringify(savedBooks))
+    this.setRandomBook()
   } 
 
 
