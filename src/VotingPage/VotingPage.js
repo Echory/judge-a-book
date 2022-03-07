@@ -17,8 +17,8 @@ const VotingPage = ({book, nextBook, saveBook}) => {
         <section className="cover-section">
           <img className="cover-img" src={book.volumeInfo.imageLinks.thumbnail}/>
           <div className="vote-buttons">
-            <button className="vote-button thumbs-up" onClick={saveBook}>Save</button>
             <button className="vote-button thumbs-down" onClick={nextBook}>Next</button>
+            <button className="vote-button thumbs-up" onClick={saveBook}>Save</button>
           </div>
         </section>
       </div>
